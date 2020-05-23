@@ -1,0 +1,306 @@
+@import "style.scss";
+.page2,
+.page3,
+.page4 {
+  opacity: 0;
+}
+.nav-links :hover ~ .page2 {
+  opacity: 1;
+}
+.nav-links :hover ~ .page3 {
+  opacity: 1;
+}
+.nav-links :hover ~ .page4 {
+  opacity: 1;
+}
+.nav-links :hover ~ .page1 {
+  filter: hue-rotate(180deg);
+}
+// #navbar{
+//   li{
+//     text-shadow: 1.5px 1.5px 2px #999;
+//   }
+// }
+* {
+  overflow: hidden;
+}
+body {
+  overflow: hidden;
+}
+#myheader {
+  width: 100%;
+  height: 100vh;
+  #topheader {
+    margin-top: 135px;
+    background: white;
+    // background: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+    font-family: $myfont;
+    font-size: 5vw;
+    z-index: 1;
+    height: 20vh;
+    mix-blend-mode: screen;
+  }
+  #tanki {
+    margin-top: -5px;
+    background: white;
+    // background: yellow;
+    color: black;
+    pointer-events: none;
+    width: 100%;
+    text-align: center;
+    font-family: $myfont;
+    font-size: 10vw;
+    height: 30%;
+    mix-blend-mode: screen;
+  }
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    height: 100vh;
+    width: 100vw;
+  }
+  #play-button {
+    margin-top: -5px;
+    position: relative;
+    background: white;
+    // background: pink;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    mix-blend-mode: screen;
+    a {
+      background: white;
+      position: absolute;
+      top: 0;
+      font-family: $myfont;
+      font-size: 4vw;
+      font-weight: bold;
+      padding: 20px 0px;
+    }
+  }
+}
+@media only screen and (max-width: 714px) {
+  body{
+    width: 100%;
+  }
+  #navbar {
+    ul {
+      width: 100%;
+    }
+    li {
+      font-size: 1rem;
+    }
+  }
+  #myheader {
+    #topheader {
+      font-size: 3rem;
+    }
+    #tanki {
+      font-size: 6rem;
+      height: 40%;
+    }
+    #play-button {
+      a {
+        top: 10px;
+        font-size: 3rem;
+      }
+    }
+  }
+}
+@media only screen and (max-height: 552px) {
+  *{
+    overflow: visible;
+  }
+  body{
+    overflow-y: visible;
+  }
+  #myheader{
+    #tanki{
+      height: 60%;
+    }
+  }
+}
+
+// @media only screen and (max-width: 600px) {
+//   #myheader {
+//     height: 52rem;
+
+//     video {
+//       object-fit: cover;
+//       height: 50rem;
+//     }
+//     h1 {
+//       font-size: 10rem;
+//     }
+
+//     @keyframes fade1 {
+//       0% {
+//         opacity: 0;
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//         transform: translate(-50%, -50%);
+//       }
+//       10% {
+//         opacity: 1;
+//       }
+//       20% {
+//         opacity: 0.5;
+//       }
+//       100% {
+//         position: absolute;
+//         top: 0;
+//         left: 20px;
+//         opacity: 1;
+//         font-size: 10rem;
+//       }
+//     }
+
+//     @keyframes fade2 {
+//       0% {
+//         opacity: 0;
+//         width: 100vw;
+//         top: 50%;
+//         left: 50%;
+//         transform: translate(-50%, -50%);
+//       }
+//       10% {
+//         opacity: 1;
+//       }
+//       20% {
+//         opacity: 0.5;
+//       }
+//       100% {
+//         position: absolute;
+//         top: 10rem;
+//         opacity: 1;
+//         font-size: 10rem;
+//         width: 100vw;
+//         left: 70px;
+//       }
+//     }
+
+//     @keyframes fade3 {
+//       0% {
+//         opacity: 0;
+//         width: 100vw;
+//         top: 50%;
+//         left: 50%;
+//         transform: translate(-50%, -50%);
+//       }
+//       10% {
+//         opacity: 1;
+//       }
+//       20% {
+//         opacity: 0.5;
+//       }
+//       100% {
+//         position: absolute;
+//         top: 20rem;
+//         opacity: 1;
+//         font-size: 10rem;
+//         width: 100vw;
+//         left: 70px;
+//       }
+//     }
+//     @keyframes fade4 {
+//       0% {
+//         opacity: 0;
+//         width: 100vw;
+//         top: 50%;
+//         left: 50%;
+//         transform: translate(-50%, -50%);
+//       }
+//       10% {
+//         opacity: 1;
+//       }
+//       20% {
+//         opacity: 0.5;
+//       }
+//       100% {
+//         position: absolute;
+//         top: 30rem;
+//         opacity: 1;
+//         font-size: 10rem;
+//         width: 100vw;
+//         left: 70px;
+//       }
+//     }
+//     @keyframes fade5 {
+//       0% {
+//         opacity: 0;
+//         width: 100vw;
+//         top: 50%;
+//         left: 50%;
+//         transform: translate(-50%, -50%);
+//       }
+//       10% {
+//         opacity: 1;
+//       }
+//       20% {
+//         opacity: 0.5;
+//       }
+//       100% {
+//         position: absolute;
+//         top: 40rem;
+//         opacity: 1;
+//         font-size: 10rem;
+//         width: 100vw;
+//         left: 70px;
+//       }
+//     }
+
+//     h1 :nth-child(1) {
+//       font-size: 30rem;
+//       opacity: 0;
+//       transition: 0.5s;
+//       animation: fade1 3s ease-in-out forwards 0s;
+//     }
+//     h1 :nth-child(2) {
+//       position: absolute;
+//       left: 50%;
+//       transform: translateX(-50%);
+//       font-size: 30rem;
+//       opacity: 0;
+//       transition: 0.5s;
+//       animation: fade2 3s ease-in-out forwards 3s;
+//     }
+//     h1 :nth-child(3) {
+//       position: absolute;
+//       left: 50%;
+//       transform: translateX(-50%);
+//       font-size: 30rem;
+//       opacity: 0;
+//       transition: 0.5s;
+//       animation: fade3 3s ease-in-out forwards 6s;
+//     }
+//     h1 :nth-child(4) {
+//       position: absolute;
+//       left: 50%;
+//       transform: translateX(-50%);
+//       font-size: 30rem;
+//       opacity: 0;
+//       transition: 0.5s;
+//       animation: fade4 3s ease-in-out forwards 9s;
+//     }
+//     h1 :nth-child(5) {
+//       position: absolute;
+//       left: 50%;
+//       transform: translateX(-50%);
+//       font-size: 30rem;
+//       opacity: 0;
+//       transition: 0.5s;
+//       animation: fade5 3s ease-in-out forwards 12s;
+//     }
+//   }
+// }

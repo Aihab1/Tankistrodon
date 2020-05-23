@@ -1,0 +1,374 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+/* Creating variables*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#navbar {
+  position: absolute;
+  top: 0;
+  background: white;
+  z-index: 1;
+  height: 140px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Roboto", sans-serif;
+  mix-blend-mode: screen;
+}
+
+#navbar ul {
+  width: 60vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0 auto;
+}
+
+#navbar li {
+  padding: 2vh 2vw;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+#navbar .nav-links {
+  overflow: hidden;
+  position: relative;
+}
+
+#navbar .nav-links .border-horizontal, #navbar .nav-links .border1, #navbar .nav-links .border4 {
+  height: 6px;
+  width: 100%;
+  position: absolute;
+}
+
+#navbar .nav-links .border-vertical, #navbar .nav-links .border2, #navbar .nav-links .border3 {
+  height: 100%;
+  width: 6px;
+  position: absolute;
+}
+
+#navbar .nav-links .border1 {
+  top: 0;
+  left: -100%;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(#ACBB78), to(#799F0C));
+  background: linear-gradient(90deg, transparent, #ACBB78, #799F0C);
+  -webkit-animation: run1 2s linear 0s infinite;
+          animation: run1 2s linear 0s infinite;
+}
+
+#navbar .nav-links .border4 {
+  bottom: 0;
+  right: -100%;
+  background: -webkit-gradient(linear, right top, left top, from(transparent), color-stop(#ACBB78), to(#799F0C));
+  background: linear-gradient(-90deg, transparent, #ACBB78, #799F0C);
+  -webkit-animation: run4 2s linear 1s infinite;
+          animation: run4 2s linear 1s infinite;
+}
+
+#navbar .nav-links .border2 {
+  left: 0;
+  bottom: -100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(transparent), color-stop(#ACBB78), to(#799F0C));
+  background: linear-gradient(360deg, transparent, #ACBB78, #799F0C);
+  -webkit-animation: run2 2s linear 1.5s infinite;
+          animation: run2 2s linear 1.5s infinite;
+}
+
+#navbar .nav-links .border3 {
+  top: -100%;
+  right: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(#ACBB78), to(#799F0C));
+  background: linear-gradient(180deg, transparent, #ACBB78, #799F0C);
+  -webkit-animation: run3 2s linear 0.5s infinite;
+          animation: run3 2s linear 0.5s infinite;
+}
+
+@-webkit-keyframes run1 {
+  0% {
+    -webkit-transform: traslateX(-200%);
+            transform: traslateX(-200%);
+  }
+  50% {
+    -webkit-transform: translateX(201%);
+            transform: translateX(201%);
+  }
+  100% {
+    -webkit-transform: translateX(201%);
+            transform: translateX(201%);
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes run1 {
+  0% {
+    -webkit-transform: traslateX(-200%);
+            transform: traslateX(-200%);
+  }
+  50% {
+    -webkit-transform: translateX(201%);
+            transform: translateX(201%);
+  }
+  100% {
+    -webkit-transform: translateX(201%);
+            transform: translateX(201%);
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@-webkit-keyframes run4 {
+  0% {
+    -webkit-transform: traslateX(200%);
+            transform: traslateX(200%);
+  }
+  50% {
+    -webkit-transform: translateX(-201%);
+            transform: translateX(-201%);
+  }
+  100% {
+    -webkit-transform: translateX(-201%);
+            transform: translateX(-201%);
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes run4 {
+  0% {
+    -webkit-transform: traslateX(200%);
+            transform: traslateX(200%);
+  }
+  50% {
+    -webkit-transform: translateX(-201%);
+            transform: translateX(-201%);
+  }
+  100% {
+    -webkit-transform: translateX(-201%);
+            transform: translateX(-201%);
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@-webkit-keyframes run2 {
+  0% {
+    -webkit-transform: traslateY(200%);
+            transform: traslateY(200%);
+  }
+  50% {
+    -webkit-transform: translateY(-201%);
+            transform: translateY(-201%);
+  }
+  100% {
+    -webkit-transform: translateY(-201%);
+            transform: translateY(-201%);
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes run2 {
+  0% {
+    -webkit-transform: traslateY(200%);
+            transform: traslateY(200%);
+  }
+  50% {
+    -webkit-transform: translateY(-201%);
+            transform: translateY(-201%);
+  }
+  100% {
+    -webkit-transform: translateY(-201%);
+            transform: translateY(-201%);
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@-webkit-keyframes run3 {
+  0% {
+    -webkit-transform: traslateY(-200%);
+            transform: traslateY(-200%);
+  }
+  50% {
+    -webkit-transform: translateY(201%);
+            transform: translateY(201%);
+  }
+  100% {
+    -webkit-transform: translateY(201%);
+            transform: translateY(201%);
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes run3 {
+  0% {
+    -webkit-transform: traslateY(-200%);
+            transform: traslateY(-200%);
+  }
+  50% {
+    -webkit-transform: translateY(201%);
+            transform: translateY(201%);
+  }
+  100% {
+    -webkit-transform: translateY(201%);
+            transform: translateY(201%);
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+.page4,
+.page2,
+.page1 {
+  opacity: 0;
+}
+
+.nav-links :hover ~ .page4 {
+  opacity: 1;
+}
+
+.nav-links :hover ~ .page2 {
+  opacity: 1;
+}
+
+.nav-links :hover ~ .page1 {
+  opacity: 1;
+}
+
+.nav-links :hover ~ .page3 {
+  -webkit-filter: hue-rotate(230deg);
+          filter: hue-rotate(230deg);
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-image: -webkit-gradient(linear, left top, right top, from(#ffac81), to(#ff928b));
+  background-image: linear-gradient(90deg, #ffac81, #ff928b);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#navbar {
+  -webkit-filter: hue-rotate(120deg);
+          filter: hue-rotate(120deg);
+  mix-blend-mode: normal;
+  background: transparent;
+}
+
+#navbar li {
+  opacity: 0.7;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+section {
+  margin-top: 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 83%;
+}
+
+section .year {
+  font-size: 3rem;
+}
+
+section h1 {
+  font-size: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  pointer-events: none;
+  font-weight: bold;
+}
+
+section h1 span {
+  margin-right: 12pt;
+}
+
+section a {
+  font-weight: bold;
+}
+
+section a:hover {
+  color: #4a4af1;
+}
+
+section p {
+  font-style: italic;
+  pointer-events: none;
+}
+
+.head {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 714px) {
+  #navbar ul {
+    width: 100%;
+  }
+  #navbar li {
+    font-size: 1rem;
+  }
+}
+/*# sourceMappingURL=about-style.css.map */

@@ -1,0 +1,135 @@
+/* Creating variables*/
+$myfont: "Roboto", sans-serif;
+// $grad-combo: #F5F7FA, #ABE9CD,#5dcab8, #03C8A8;
+$grad-combo: transparent, #ACBB78, #799F0C;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+#navbar{
+    position: absolute;
+    top: 0;
+    background: white;
+    z-index: 1;
+    height: 140px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-family: $myfont;
+    mix-blend-mode: screen;
+    ul{
+      width: 60vw;
+      display: flex;
+      list-style: none;
+      justify-content: space-around;
+      margin: 0 auto;
+    }
+    li{
+      padding: 2vh 2vw;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    
+    .nav-links{
+      overflow: hidden;
+      position: relative;
+      
+      .border-horizontal{
+        height: 6px;
+        width: 100%;
+        position: absolute;
+      }
+      .border-vertical{
+        height: 100%;
+        width: 6px;
+        position: absolute;
+      }
+      .border1{
+        @extend .border-horizontal;
+        top: 0;
+        left: -100%;
+        background: linear-gradient(90deg, $grad-combo);
+        animation: run1 2s linear 0s infinite;
+      }
+      .border4{
+        @extend .border-horizontal;
+        bottom: 0;
+        right: -100%;
+        background: linear-gradient(-90deg, $grad-combo);
+        animation: run4 2s linear 1s infinite;
+      }
+      .border2{
+        @extend .border-vertical;
+        left: 0;
+        bottom: -100%;
+        background: linear-gradient(360deg, $grad-combo);
+        animation: run2 2s linear 1.5s infinite;
+      }
+      .border3{
+        @extend .border-vertical;
+        top: -100%;
+        right: 0;
+        background: linear-gradient(180deg, $grad-combo);
+        animation: run3 2s linear 0.5s infinite;
+      }
+    }
+    @keyframes run1{
+      0%{
+        transform: traslateX(-200%);
+      }
+      50%{
+        transform: translateX(201%);
+      }
+      100%{
+        transform: translateX(201%);
+        filter: hue-rotate(360deg);
+      }
+    }
+    @keyframes run4{
+      0%{
+        transform: traslateX(200%);
+      }
+      50%{
+          transform: translateX(-201%);
+      }
+      100%{
+        transform: translateX(-201%);
+        filter: hue-rotate(360deg);
+      }
+    }
+    @keyframes run2{
+      0%{
+        transform: traslateY(200%);
+      }
+      50%{
+          transform: translateY(-201%);
+      }
+      100%{
+        transform: translateY(-201%);
+        filter: hue-rotate(360deg);
+      } 
+    }
+    @keyframes run3{
+      0%{
+        transform: traslateY(-200%);
+      }
+      50%{
+          transform: translateY(201%);
+      }
+      100%{
+        transform: translateY(201%);
+        filter: hue-rotate(360deg);
+      } 
+    }
+  }

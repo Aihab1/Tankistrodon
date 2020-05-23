@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import "style.scss";
+.page4,
+.page3,
+.page1 {
+  opacity: 0;
+}
+.nav-links :hover ~ .page4 {
+  opacity: 1;
+}
+.nav-links :hover ~ .page3 {
+  opacity: 1;
+}
+.nav-links :hover ~ .page1 {
+  opacity: 1;
+}
+.nav-links :hover ~ .page2 {
+  filter: hue-rotate(300deg);
+}
+*{
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  width: 100%;
+  background: linear-gradient(-84deg, #434343, black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;   
+}
+
+#navbar {
+  mix-blend-mode: normal;
+  background: transparent;
+  filter: invert(1);
+  li{
+    opacity: 0.7; 
+    text-shadow: 2px 2px 2px white;
+  }
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: black;
+    text-decoration: none;
+}
+.container{
+    margin-top: 40px;
+    margin-bottom: 30px;
+    .col-sm{
+        text-align: center;
+        overflow: hidden;
+        img{
+          padding: 10pt 0px;
+          opacity: 0.9;
+        }
+    }
+    #gold-container{
+      background: transparent;
+      border: none;
+      outline: none;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+    #gold-container:hover{
+      animation: color_change 10s ease forwards infinite;
+    }
+}
+@keyframes color_change{
+  50%{
+    filter: hue-rotate(180deg);
+  }
+  100%{
+    filter: hue-rotate(360deg);
+  }
+}
+
+h1{
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  margin-top: 150px;
+  font-family: 'Dancing Script', 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 5rem;
+  pointer-events: none;
+  color: white;
+  opacity: 0.8;
+}
+@media only screen and (max-width: 714px) {
+  #navbar {
+    ul {
+      width: 100%;
+    }
+    li{
+        font-size: 1rem;
+    }
+  }
+  #gold-container{
+    animation: color_change 10s ease forwards infinite;
+  } 
+}

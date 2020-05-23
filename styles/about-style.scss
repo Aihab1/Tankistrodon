@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import "style.scss";
+.page4,
+.page2,
+.page1 {
+  opacity: 0;
+}
+.nav-links :hover ~ .page4 {
+  opacity: 1;
+}
+.nav-links :hover ~ .page2 {
+  opacity: 1;
+}
+.nav-links :hover ~ .page1 {
+  opacity: 1;
+}
+.nav-links :hover ~ .page3 {
+  filter: hue-rotate(230deg);
+}
+* {
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-image: linear-gradient(90deg, #ffac81, #ff928b);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#navbar {
+  filter: hue-rotate(120deg);
+  mix-blend-mode: normal;
+  background: transparent;
+  li {
+    opacity: 0.7;
+  }
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+section {
+  margin-top: 140px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 83%;
+  .year {
+    font-size: 3rem;
+  }
+  h1 {
+    font-size: 1.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    pointer-events: none;
+    font-weight: bold;
+    span {
+      margin-right: 12pt;
+    }
+  }
+  a {
+    font-weight: bold;
+  }
+  a:hover {
+    color: rgb(74, 74, 241);
+  }
+  p {
+    font-style: italic;
+    pointer-events: none;
+  }
+}
+.head {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+@media only screen and (max-width: 714px) {
+    #navbar {
+      ul {
+        width: 100%;
+      }
+      li{
+          font-size: 1rem;
+      }
+    } 
+}
+

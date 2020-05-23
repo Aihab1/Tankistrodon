@@ -1,0 +1,402 @@
+@import "style.scss";
+.page2,
+.page3,
+.page1 {
+  opacity: 0;
+}
+.nav-links :hover ~ .page2 {
+  opacity: 1;
+}
+.nav-links :hover ~ .page3 {
+  opacity: 1;
+}
+.nav-links :hover ~ .page1 {
+  opacity: 1;
+}
+.nav-links :hover ~ .page4 {
+  filter: hue-rotate(340deg);
+}
+* {
+  font-family: "Roboto", sans-serif;
+}
+body {
+  width: 100%;
+}
+#navbar {
+  mix-blend-mode: normal;
+  background: transparent;
+  filter: invert(1);
+  li {
+    opacity: 0.7;
+    text-shadow: 2px 2px 2px white;
+  }
+}
+a {
+  color: black;
+}
+#back {
+  height: 70vh;
+  background-image: url("../images/background.jpg");
+  background-size: 100% auto;
+  // background-attachment: fixed;
+  background-repeat: no-repeat;
+  -webkit-box-reflect: below -1px -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(transparent),
+      color-stop(57%, transparent),
+      to(rgba(250, 250, 250, 1))
+    );
+}
+#page-up {
+  width: 100%;
+  i {
+    font-size: 40pt;
+    z-index: 10;
+    color: white;
+    opacity: 0.4;
+    text-shadow: 2px 2px 2px black;
+  }
+  i:hover {
+    opacity: 0.8;
+  }
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  background-image: linear-gradient(90deg, #ffac81, #ff928b);
+  #page-up-container {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+  a {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #contact-me {
+    transition: transform 0.3s ease;
+  }
+  #contact-me:hover {
+    transform: translateY(-10px);
+  }
+  h1,
+  h2 {
+    text-shadow: 3px 3px 2px black;
+  }
+  h1 {
+    font-size: 3.5vw;
+  }
+  h2 {
+    font-size: 2vw;
+  }
+}
+#page-down {
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(90deg, #ffac81, #ff928b);
+  h1 {
+    width: 90%;
+    pointer-events: none;
+    text-align: center;
+    padding-top: 16pt;
+    font-size: 4.5vw;
+    color: black;
+    opacity: 0.9;
+  }
+  p {
+    width: 60%;
+    font-style: italic;
+    text-align: center;
+    margin-top: 15pt;
+  }
+  #images {
+    .lol-images {
+      opacity: 0.5;
+    }
+    .lol-images:hover {
+      opacity: 1;
+      z-index: 100;
+    }
+    position: relative;
+    width: 100%;
+    margin-top: 80pt;
+    #nothing {
+      width: 100%;
+      height: 150vh;
+      background-image: linear-gradient(90deg, #ffac81, #ff928b);
+    }
+  }
+  #images :nth-child(2) {
+    @extend .lol-images;
+    position: absolute;
+    top: 15px;
+    left: 3%;
+    animation: roll2 40s linear infinite;
+  }
+  #images :nth-child(3) {
+    @extend .lol-images;
+    position: absolute;
+    top: 30px;
+    left: 34%;
+    animation: roll3 40s linear infinite;
+  }
+  #images :nth-child(5) {
+    @extend .lol-images;
+    position: absolute;
+    top: 20px;
+    left: 75%;
+    animation: roll5 40s linear infinite;
+  }
+  #images :nth-child(4) {
+    @extend .lol-images;
+    position: absolute;
+    top: 40%;
+    left: 3%;
+    animation: roll4 40s linear infinite;
+  }
+  #images :nth-child(6) {
+    @extend .lol-images;
+    position: absolute;
+    top: 65%;
+    left: 65%;
+    animation: roll6 40s linear infinite;
+  }
+  #images :nth-child(7) {
+    @extend .lol-images;
+    position: absolute;
+    top: 40%;
+    left: 24%;
+    animation: roll7 40s linear infinite;
+  }
+  #images :nth-child(8) {
+    @extend .lol-images;
+    position: absolute;
+    top: 75%;
+    left: 4%;
+    animation: roll8 40s linear infinite;
+  }
+}
+@keyframes roll2 {
+  0% {
+    top: 15px;
+    left: 3%;
+  }
+  50% {
+    top: 10%;
+    left: 40%;
+    transform: rotate(180deg);
+  }
+  100% {
+    top: 15px;
+    left: 3%;
+    transform: rotate(360deg);
+  }
+}
+@keyframes roll3 {
+  0% {
+    top: 30px;
+    left: 34%;
+  }
+  50% {
+    top: 20%;
+    left: 5%;
+    transform: rotate(-180deg);
+  }
+  100% {
+    top: 30px;
+    left: 34%;
+    transform: rotate(-360deg);
+  }
+}
+@keyframes roll5 {
+  0% {
+    top: 20px;
+    left: 75%;
+  }
+  50% {
+    top: 30%;
+    left: 50%;
+    transform: rotate(360deg);
+  }
+  100% {
+    top: 20px;
+    left: 75%;
+    transform: rotate(720deg);
+  }
+}
+@keyframes roll7 {
+  0% {
+    top: 40%;
+    left: 24%;
+  }
+  50% {
+    top: 2%;
+    left: 58%;
+    transform: rotate(340deg);
+  }
+  100% {
+    top: 40%;
+    left: 24%;
+    transform: rotate(0deg);
+  }
+}
+@keyframes roll4 {
+  0% {
+    top: 40%;
+    left: 3%;
+  }
+  50% {
+    top: 2%;
+    left: 10%;
+    transform: rotate(-360deg);
+  }
+  100% {
+    top: 40%;
+    left: 3%;
+    transform: rotate(-720deg);
+  }
+}
+@keyframes roll6 {
+  0% {
+    top: 65%;
+    left: 65%;
+  }
+  50% {
+    top: 70%;
+    left: 50%;
+    transform: rotate(30deg);
+  }
+  100% {
+    top: 65%;
+    left: 65%;
+    transform: rotate(0deg);
+  }
+}
+@keyframes roll8 {
+  0% {
+    top: 80%;
+    left: 4%;
+  }
+  50% {
+    top: 45%;
+    left: 10%;
+    transform: rotate(-120deg);
+  }
+  100% {
+    top: 80%;
+    left: 4%;
+    transform: rotate(0deg);
+  }
+}
+@media only screen and (max-width: 892px) {
+  #back {
+    background-size: 100% 100%;
+  }
+  #page-up {
+    h1 {
+      font-size: 2.5rem;
+    }
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
+}
+@media only screen and (max-width: 714px) {
+  #navbar {
+    ul {
+      width: 100%;
+    }
+    li {
+      font-size: 1rem;
+    }
+  }
+  #page-up {
+    h1 {
+      font-size: 2.5rem;
+    }
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
+  #page-down {
+    margin-top: -1px;
+    p {
+      width: 85%;
+    }
+    #images {
+      #nothing {
+        height: 100vh;
+      }
+      img{
+        width: 40%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 562px) {
+  #back {
+    height: 60vh;
+    background-size: 100% 100%;
+    -webkit-box-reflect: below -2px -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(transparent),
+        color-stop(57%, transparent),
+        to(rgba(250, 250, 250, 1))
+      );
+  }
+  #page-up {
+    height: 40vh;
+    #page-up-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 40vh;
+    }
+  }
+  #page-down {
+    margin-top: -1px;
+    h1 {
+      font-size: 3rem;
+    }
+    #images {
+      #nothing {
+        height: 100vh;
+      }
+      img{
+        width: 50%;
+      }
+    }
+    p::after{
+      content: 'Now, the pictures you see below are useless unless you open the website on a PC.';
+    }
+  }
+  @keyframes roll6 {
+    0% {
+      top: 65%;
+      left: 65%;
+    }
+    50% {
+      top: 70%;
+      left: 30%;
+      transform: rotate(360deg);
+    }
+    100% {
+      top: 65%;
+      left: 65%;
+      transform: rotate(720deg);
+    }
+  }
+}
